@@ -1,0 +1,18 @@
+<h1>Reviews</h1>
+<div>
+  <input type="text" [(ngModel)]="userInput">
+  <button (click)="addReview()">ADD REVIEW</button><br><br>
+</div>
+
+<div>
+
+  <input text="number" id="in">
+
+  <button (click)=" getReview()">REVIEW By CurrentId</button>
+</div>
+<ul>
+  <li *ngFor="let review of reviews">
+    <p>{{review.id}}:{{review.review}}</p>
+    <button (click)="deleteReview(review.id)">Delete</button>
+  </li>
+</ul>
